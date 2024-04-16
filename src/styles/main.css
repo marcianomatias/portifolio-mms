@@ -1,0 +1,537 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins ,serif;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+
+
+:root{
+    --card-height : 65vh;
+    --card-width : calc(var(--card-height)/1.5);
+}
+.nav-logo img{
+   filter: invert(90%);
+}
+img{
+    width: 100%;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #18181B !important;
+    
+}
+nav{
+    min-width: 1200px;
+    margin: -18rem 5rem -22rem 0;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.nav-logo{
+    min-width: none;
+    margin-right: -22rem;
+}
+.nav-logo img{
+    margin-left: 22rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.nav-links{
+    margin-left: 15rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+    margin-top: 5rem;
+}
+.link a::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #a539a5ec;
+    transition: all .3s ease;
+}
+.link a:hover::after{
+    width: 90%;
+}
+a{
+    font-size: 1rem;
+    color: #fff;   
+    cursor: pointer;   
+}
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
+    background-color: #1d4ed8;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-left: 10px solid #6d8bdd;
+    box-shadow: 5px 5px 10px #5d6475;
+}
+.btn2{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
+    background-color: #1d4ed8;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-left: 10px solid #6d8bdd;
+    box-shadow: 5px 5px 10px #5d6475;
+}
+.btn3 {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+    background-color: #1d4ed8;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-left: 10px solid #6d8bdd;
+    box-shadow: 5px 5px 10px #5d6475;
+    float: right;
+}
+.btn3>a{
+    color: #fff;
+}
+.btn:hover{
+    background-color: #617edb;
+    border-left: 10px solid #2a5eec;
+}
+.btn2:hover{
+    background-color: #617edb;
+    border-left: 10px solid #2a5eec;
+}
+
+.btn3:hover{
+    background-color: #617edb;   
+    border-left: 10px solid #2a5eec;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+.blur{
+    position: absolute !important;
+    box-shadow: 0 0 1000px 50px #6d8bdd !important;
+    z-index: -100 !important;
+}
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600!important;
+    text-transform: uppercase;
+}
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    font-size: 3rem;
+}
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px  #1e40af;
+}
+header .content p{
+    margin-bottom: 2rem;
+    color: #ccc;
+    text-align: justify;
+}
+header .image{
+    position: relative;
+}
+.image img{
+    border-radius: 15px;
+    width: 650px;
+    height: 350px;
+}
+header .image::before{
+    content: "o";
+    position: absolute;
+    top: 0;
+    margin-top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: .09;
+    z-index: -100;
+}
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+.container .header .projects > .btn{
+    margin: 4rem!important;
+
+}
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;    
+    border-radius: 15px;
+    transition: all .3s spin;
+
+}
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+.features .card span{
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 50% / 15%;
+}
+.features .card h2{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: .25rem;
+    font-weight: 600;
+}
+.features .card h3{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: #1d4ed8;
+    text-align: center;
+    margin-top: .25rem;
+    font-weight: 500;
+}
+.features .card h4{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    color: #6d8bdd;
+    text-align: center;
+    margin-top: .25rem;
+    font-weight: 400;
+}
+.features .card p{
+    color: #fff;
+    font-size: .95rem;
+    margin-bottom: .5rem;
+}
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+.projects{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.projects .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+}
+.projects .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+.projects .card .content{
+    flex: 1;
+    margin-bottom: -21rem;
+}
+.projects .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.projects .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #ccc;
+}
+.projects .card p{
+    color: #fff;
+    margin-bottom: .75rem;
+    text-align: justify;
+    margin-left: 1.5rem;
+}
+.projects .card button{  
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+    margin-bottom: 0;
+}
+
+.skills{
+    margin-top: 4rem;
+    margin-bottom: 24rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+    max-height: 50px;
+}
+.skills .card{
+    padding: 2rem 1rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+}
+.skills .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.skills .card h4{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: .82rem;
+    font-weight: 500;
+}
+.skills .card h3{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #ccc;
+}
+
+.skills .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 2rem;
+}
+
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns:400px repeat(3, 1fr);
+    gap: 2rem;
+}
+footer .column .logo{
+    max-width: 100px;
+   filter: invert(90%);
+   margin-bottom: 2rem;
+}
+footer .column p{
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer .column .socials a{
+    color:#ccc;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 100%;
+    font-size: 1.25rem;
+    transition: all .3s ease;
+}
+footer .column .socials .git:hover{
+    color: #323232;
+    background-color: #fff;
+    border-color:#1d4ed8;
+}
+footer .column .socials .link:hover{
+    color: #1d4ed8;
+    background-color: #fff;
+    border-color:#1d4ed8;
+}
+footer .column .socials .what:hover{
+    color: #238128;
+    background-color: #fff;
+    border-color:#1d4ed8;
+}
+footer .column h4{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+footer .column > a{
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all .3s ease;
+}
+footer .column > a:hover{
+    color: #1d4ed8;
+}
+
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: .8rem;
+    text-align: center;
+}
+
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+   100% {
+        --rotate: 360deg;
+    }
+}
+
+@media (width < 900px){
+    img{
+        width: 50%;
+        display: flex;
+    }
+    .image{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 4rem;
+    }
+    nav{
+        display:block;
+        margin-top: 5rem;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-logo img{
+        margin-bottom: 2rem;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features, .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills{
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 54rem;
+
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+@media (width < 600px){
+    img{
+       
+        display: flex;
+    }
+    header .image img{
+        max-width: 450px;
+        margin: auto;
+    }
+    .image{
+       width: 25%;
+       height: 25%;
+       margin-bottom: 2rem;
+    }
+    .content{
+        margin-bottom: 2.5rem;
+        max-width: 250px;
+    }
+    header .content h1{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    header .content p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        width: 85vw;
+    }
+    header .image::before{
+        display: none;
+    }
+    .features, .projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skills{
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 144rem;
+    }
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
